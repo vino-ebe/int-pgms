@@ -13,18 +13,18 @@ void print_phone(char a[], int n);
 
 int main()
 {
-    int a[10];
+    int a[10] = {1, 2, 3};;
     //backtrack_comb(a, 0, 3);
     int p[5] = {1, 2, 3, 4};
-    //backtrack_perm(p, 0, 4);
+    backtrack_perm(p, 0, 4);
     char arr[3][4] = {"abc","def","ghi"};
     char output[4];
-    backtrack_digipad(arr, 0, 3, output);
+//    backtrack_digipad(arr, 0, 3, output);
 }
 
 void backtrack_comb(int a[], int k, int n) 
 {
-    int ttable[2] = {1, 0};
+    int ttable[2] = {0, 1};
 
     if (k == n ) {
         print_comb(a, k, n);
